@@ -13,3 +13,6 @@ hyperlinks = doc.find('table', {'data-testid': 'vuln-hyperlinks-table'})
 links = hyperlinks.find_all('a')
 for link in links:
     print(link.text.strip())
+
+quickInfo = doc.find('div', {'class': 'bs-callout bs-callout-info'})
+print(quickInfo.text.strip())
