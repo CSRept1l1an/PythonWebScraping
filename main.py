@@ -13,10 +13,10 @@ hyperlinks = doc.find('table', {'data-testid': 'vuln-hyperlinks-table'})
 links = hyperlinks.find_all('a')
 quickInfo = doc.find('div', {'class': 'bs-callout bs-callout-info'})
 
-print(descriptions.text)
-print(baseScore.text)
-print(vector.text)
-print(quickInfo.text)
-
+print(f"Description:\n{descriptions.text}\n")
+print(f"Base Score:\n{baseScore.text}\n")
+print(f"CVSS Vector:\n{vector.text}\n")
+print(f"{quickInfo.text}")
+print("Hyperlinks:")
 for link in links:
     print(link.text.strip())
